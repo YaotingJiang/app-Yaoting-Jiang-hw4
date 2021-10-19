@@ -1,0 +1,24 @@
+{% if objects %}
+<table id='result' class='display'>
+    <thead>
+    <tr>
+        {% for header in headers %}
+        <th>{{header}}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for object in objects %}
+    <tr>
+        <td>{{object.book_id}}</td>
+        <td>{{object.title}}}</td>
+        <td>{{object.author}}</td>
+        <td>{{object.checked_out}}</td>
+        <td>{{object.borrower_id}}</td>
+        <td>{{object.borrower_name}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endif %}
